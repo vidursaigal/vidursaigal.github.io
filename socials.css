@@ -1,185 +1,121 @@
-body
-{
-  margin:0;
-  padding:0;
-  background:#ccc;
+.wrapper body {
+  background-color: #ddd;
+  padding: 20px 20px 20px 20px;
 }
-ul
-{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  margin:0;
-  padding:0;
-  display:flex;
+.wrapper .social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
 }
-ul li
-{
-  list-style:none;
-  margin:0 40px;
+.wrapper .social-buttons__button {
+  margin: 0px 0px 0;
 }
-ul li a .fa
-{
-  font-size:40px;
-  color:#262626;
-  line-height:60px;
-  transition:.5s;
+.wrapper .social-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: 70px;
+  height: 70px;
+  text-decoration: none;
+  border-radius: 100%;
+  background: hsl(0deg, 0%, 96%);
+  text-align: center;
 }
-ul li a 
-{
-  position:relative;
-  display:block;
-  width:60px;
-  height:60px;
-  background:#fff;
-  text-align:center;
-  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
-  transition:.5s;
-  transition-timing-function: linear;
-  box-shadow:-20px 20px 10px rgba(0,0,0,.5);
+.wrapper .social-button::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: 0.3s;
 }
-ul li a:before
-{
-  content:'';
-  position:absolute;
-  top:10px;
-  left:-20px;
-  height:100%;
-  width:20px;
-  background:#b1b1b1;
-  transition: .5s;
-  transform: rotate(0deg) skewY(-45deg);
+.wrapper .social-button:focus, .wrapper .social-button:hover {
+  color: #fff;
 }
-ul li a:after
-{
-  content:'';
-  position:absolute;
-  bottom:-20px;
-  left:-10px;
-  height:20px;
-  width:100%;
-  background:#b1b1b1;
-  transition: .85s;
-  transform: rotate(0deg) skewX(-45deg);
+.wrapper .social-button:focus::after, .wrapper .social-button:hover::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin-left: calc(-50% - 1px);
 }
-ul li a:hover
-{
-  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
-  box-shadow:-50px 50px 50px rgba(0,0,0,.5);
+.wrapper .social-button i,
+.wrapper .social-button svg {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
 }
-ul li:hover .fa
-{
-  color:#fff;
+.wrapper .social-button i {
+  font-size: 28px;
 }
-/* youtube */
-ul li:hover:nth-child(1) a
-{
-  background: #cd201f;
+.wrapper .social-button svg {
+  height: 40%;
+  width: 40%;
 }
-ul li:hover:nth-child(1) a:before
-{
-  background: #930504;
+.wrapper .social-button--mail {
+  color: #0072c6;
 }
-ul li:hover:nth-child(1) a:after
-{
-  background: #e62c2a;
+.wrapper .social-button--mail::after {
+  background: #0072c6;
 }
-
-/* bitbucket */
-ul li:hover:nth-child(2) a
-{
-  background: #0084ff;
+.wrapper .social-button--facebook {
+  color: #3b5999;
 }
-ul li:hover:nth-child(2) a:before
-{
-  background: #145dc6;
-}
-ul li:hover:nth-child(2) a:after
-{
-  background: #1170f9;
-}
-
-/* instagram */
-ul li:hover:nth-child(3) a
-{
-  background: #e4405f;
-}
-ul li:hover:nth-child(3) a:before
-{
-  background: #cb1d3d;
-}
-ul li:hover:nth-child(3) a:after
-{
-  background: #ad344a;
-}
-
-/* tumblr */
-ul li:hover:nth-child(4) a
-{
-  background: #34465d;
-}
-ul li:hover:nth-child(4) a:before
-{
-  background: #253244;
-}
-ul li:hover:nth-child(4) a:after
-{
-  background: #40536b;
-}
-
-/* skype */
-ul li:hover:nth-child(5) a
-{
-  background: #00AFF0;
-}
-ul li:hover:nth-child(5) a:before
-{
-  background: #166e9b;
-}
-ul li:hover:nth-child(5) a:after
-{
-  background: #3c8eb9;
-}
-
-/* facebook */
-ul li:hover:nth-child(6) a
-{
+.wrapper .social-button--facebook::after {
   background: #3b5999;
 }
-ul li:hover:nth-child(6) a:before
-{
-  background: #2c3e64;
+.wrapper .social-button--linkedin {
+  color: #0077b5;
 }
-ul li:hover:nth-child(6) a:after
-{
-  background: #516aa5;
+.wrapper .social-button--linkedin::after {
+  background: #0077b5;
 }
-
-/* github */
-ul li:hover:nth-child(7) a
-{
-  background: #4b4e58;
+.wrapper .social-button--github {
+  color: #6e5494;
 }
-ul li:hover:nth-child(7) a:before
-{
-  background: #28292a;
+.wrapper .social-button--github::after {
+  background: #6e5494;
 }
-ul li:hover:nth-child(7) a:after
-{
-  background: #5c5f6d;
+.wrapper .social-button--codepen {
+  color: #212121;
 }
-
-/* pinterest */
-ul li:hover:nth-child(8) a
-{
-  background: #bd081c;
+.wrapper .social-button--codepen::after {
+  background: #212121;
 }
-ul li:hover:nth-child(8) a:before
-{
-  background: #930011;
+.wrapper .social-button--steam {
+  color: #7da10e;
 }
-ul li:hover:nth-child(8) a:after
-{
-  background: #bb2a3a;
+.wrapper .social-button--steam::after {
+  background: #7da10e;
+}
+.wrapper .social-button--snapchat {
+  color: #eec900;
+}
+.wrapper .social-button--snapchat::after {
+  background: #eec900;
+}
+.wrapper .social-button--twitter {
+  color: #55acee;
+}
+.wrapper .social-button--twitter::after {
+  background: #55acee;
+}
+.wrapper .social-button--instagram {
+  color: #e4405f;
+}
+.wrapper .social-button--instagram::after {
+  background: #e4405f;
+}
+.wrapper .social-button--npmjs {
+  color: #c12127;
+}
+.wrapper .social-button--npmjs::after {
+  background: #c12127;
+}/*# sourceMappingURL=socials.css.map */
+.wrapper .column {
+  text-align: center;
 }
