@@ -9,6 +9,7 @@ const items = document.querySelectorAll('.item'),
 let current = 0;
 
 const slider = {
+  
   init: () => {
     controls.forEach(control => control.addEventListener('click', (e) => { slider.clickedControl(e) }));
     controls[current].classList.add('active');

@@ -98,7 +98,13 @@
     overflow: hidden;
     display: inline-block;
     color: rgba(247, 247, 247, 0.77);
+    font-size: 32px;
 
+
+  }
+
+  .item-description .vertical-part {
+    padding-right: 5px;
   }
   
   .vertical-part b {
