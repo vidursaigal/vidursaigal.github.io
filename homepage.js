@@ -5,6 +5,8 @@ const items = document.querySelectorAll('.item'),
   descriptionItems = document.querySelectorAll('.item-description'),
   activeDelay = .76,
   interval = 5000;
+  const websites = ["about.html", "blog.html", "experience.html", "contact.html"];
+
 
 let current = 0;
 
@@ -18,7 +20,7 @@ const slider = {
     // Add click event listeners to the images
     items.forEach(item => {   item.addEventListener('click', (e) => {
       // Navigate to a new URL or open a new page when the item is clicked
-      window.location = e.target.dataset.url;
+      window.location = websites[current];
       });
     });
   }
