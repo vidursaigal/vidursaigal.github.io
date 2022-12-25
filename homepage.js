@@ -14,7 +14,17 @@ const slider = {
     controls.forEach(control => control.addEventListener('click', (e) => { slider.clickedControl(e) }));
     controls[current].classList.add('active');
     items[current].classList.add('active');
-  },
+
+    // Add click event listeners to the images
+    items.forEach(item => {   item.addEventListener('click', (e) => {
+      // Navigate to a new URL or open a new page when the item is clicked
+      window.location = e.target.dataset.url;
+      });
+    });
+  }
+  
+  
+  ,
   nextSlide: () => { // Increment current slide and add active class
     slider.reset();
     if (current === items.length - 1) current = -1; // Check if current slide is last in array
