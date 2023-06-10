@@ -5,7 +5,7 @@
     "images_path": "./public/images/photos",
     "thumbnails_path": "./public/images/thumbnails",
     "thumbnail_height": 160,
-    "title": "Vidur Photography",
+    "title": "My Gallery",
     "description": "Default description of my gallery",
     "background_photo": "",
     "url": "",
