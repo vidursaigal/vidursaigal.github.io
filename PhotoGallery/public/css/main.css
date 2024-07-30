@@ -1,0 +1,52 @@
+body {
+  background-color: #fff;
+
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery>a, .gallery::after {
+  flex-basis: var(--w);
+}
+
+.gallery>a {
+  margin: 0.25rem;
+  flex-grow: calc(var(--w) / var(--h) * 100);
+  width: calc(var(--w) * 1px);
+}
+
+.gallery::after {
+  --w: 2;
+  --h: 1;
+  content: '';
+  flex-grow: 1000000;
+}
+
+.gallery-section h2 {
+  text-align: center;
+}
+
+
+
+.gallery-section h2 a:hover {
+  color: #0056b3;
+}
+
+.gallery-section:hover h2 a {
+  visibility: visible;
+}
+
+.gallery-section h2 a svg {
+  height: 1.2rem
+}
+
+.gallery-section p {
+  width: 70%;
+  margin: 0px auto 20px;
+}
+
+
+

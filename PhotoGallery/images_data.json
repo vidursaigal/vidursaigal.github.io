@@ -1,0 +1,226 @@
+{
+    "10dng.jpeg": {
+        "src": "images/photos/10dng.jpeg",
+        "mtime": 1685732948.07,
+        "date": "",
+        "size": [
+            5960,
+            3973
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/10dng.jpg",
+        "thumbnail_size": [
+            240,
+            160
+        ]
+    },
+    "11dng.jpeg": {
+        "src": "images/photos/11dng.jpeg",
+        "mtime": 1685732947.84,
+        "date": "",
+        "size": [
+            3627,
+            5914
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/11dng.jpg",
+        "thumbnail_size": [
+            98,
+            160
+        ]
+    },
+    "12dng.jpeg": {
+        "src": "images/photos/12dng.jpeg",
+        "mtime": 1685732947.61,
+        "date": "",
+        "size": [
+            5915,
+            3943
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/12dng.jpg",
+        "thumbnail_size": [
+            240,
+            160
+        ]
+    },
+    "2dng.jpeg": {
+        "src": "images/photos/2dng.jpeg",
+        "mtime": 1685732949.6299999,
+        "date": "",
+        "size": [
+            5868,
+            3870
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/2dng.jpg",
+        "thumbnail_size": [
+            242,
+            160
+        ]
+    },
+    "3dng.jpeg": {
+        "src": "images/photos/3dng.jpeg",
+        "mtime": 1685732949.48,
+        "date": "",
+        "size": [
+            4000,
+            6000
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/3dng.jpg",
+        "thumbnail_size": [
+            106,
+            160
+        ]
+    },
+    "4dng.jpeg": {
+        "src": "images/photos/4dng.jpeg",
+        "mtime": 1685732949.26,
+        "date": "",
+        "size": [
+            3949,
+            5923
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/4dng.jpg",
+        "thumbnail_size": [
+            106,
+            160
+        ]
+    },
+    "7dng.jpeg": {
+        "src": "images/photos/7dng.jpeg",
+        "mtime": 1685732948.75,
+        "date": "",
+        "size": [
+            4000,
+            6000
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/7dng.jpg",
+        "thumbnail_size": [
+            106,
+            160
+        ]
+    },
+    "8dng.jpeg": {
+        "src": "images/photos/8dng.jpeg",
+        "mtime": 1685732948.43,
+        "date": "",
+        "size": [
+            6000,
+            4000
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/8dng.jpg",
+        "thumbnail_size": [
+            240,
+            160
+        ]
+    },
+    "9dng.jpeg": {
+        "src": "images/photos/9dng.jpeg",
+        "mtime": 1685732948.3,
+        "date": "",
+        "size": [
+            5983,
+            3878
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/9dng.jpg",
+        "thumbnail_size": [
+            247,
+            160
+        ]
+    },
+    "_MG_9390_1.jpg": {
+        "src": "images/photos/_MG_9390_1.jpg",
+        "mtime": 1686425611.24,
+        "date": "",
+        "size": [
+            3317,
+            4000
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/_MG_9390_1.jpg",
+        "thumbnail_size": [
+            132,
+            160
+        ]
+    },
+    "_MG_9455.jpg": {
+        "src": "images/photos/_MG_9455.jpg",
+        "mtime": 1686425496.29,
+        "date": "",
+        "size": [
+            6000,
+            3255
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/_MG_9455.jpg",
+        "thumbnail_size": [
+            295,
+            160
+        ]
+    },
+    "_MG_9668.jpg": {
+        "src": "images/photos/_MG_9668.jpg",
+        "mtime": 1686425541.3799999,
+        "date": "",
+        "size": [
+            6000,
+            4000
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/_MG_9668.jpg",
+        "thumbnail_size": [
+            240,
+            160
+        ]
+    },
+    "edited-2-1.jpg": {
+        "src": "images/photos/edited-2-1.jpg",
+        "mtime": 1686425661.57,
+        "date": "",
+        "size": [
+            4000,
+            6000
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/edited-2-1.jpg",
+        "thumbnail_size": [
+            106,
+            160
+        ]
+    },
+    "edited.jpg": {
+        "src": "images/photos/edited.jpg",
+        "mtime": 1686425687.22,
+        "date": "",
+        "size": [
+            6000,
+            3325
+        ],
+        "type": "image",
+        "description": "",
+        "thumbnail": "images/thumbnails/edited.jpg",
+        "thumbnail_size": [
+            288,
+            160
+        ]
+    }
+}
