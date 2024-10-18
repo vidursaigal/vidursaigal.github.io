@@ -1,99 +1,307 @@
 <!DOCTYPE html>
 <html>
-
-
   <head>
     <link rel="shortcut icon" href="topicon.ico">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vidur Saigal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+      .folder {
+        margin-left: 20px;
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .folder:hover {
+        background-color: #f5f5f5;
+      }
+      .file {
+        margin-left: 40px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fafafa;
+        cursor: pointer;
+      }
+      .file:hover {
+        background-color: #f5f5f5;
+      }
+      .breadcrumb {
+        margin-bottom: 20px;
+      }
+      .markdown-content img {
+        max-width: 100%;
+        height: auto;
+      }
+      .markdown-content blockquote {
+        border-left: 4px solid #ddd;
+        padding-left: 10px;
+        color: #666;
+        margin-left: 0;
+      }
+      .markdown-content pre {
+        background: #f5f5f5;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+      .markdown-content code {
+        background: #f5f5f5;
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+      .welcome-message {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        mermaid.initialize({ startOnLoad: true });
+      });
+    </script>
   </head>
   <body>
-
-<nav class="navbar has-shadow is-light">
-<div class="navbar-brand">
-<a href="index.html" class= "navbar-item"> 
-  <img src="newvid.gif" width="112" height="32"></a>
-</a>
-
-<a class="navbar-burger" id = "burger">
-<span></span>
-<span></span>
-<span></span>
-</a>
-</div>
-
-<div class="navbar-menu" id="nav-links" class="is-active">
-<div class="navbar-start">
-  <a href= "about.html" class="navbar-item">About Me</a>
-  <a href= "blog.html" class="navbar-item">My Thoughts</a>
-  <a href= "experience.html" class="navbar-item">Interests & Experience</a>
-  <a href= "/PhotoGallery/public/index.html" class="navbar-item">Photography</a>
-  <a href= "contact.html" class="navbar-item">Contact Me</a>
-</div>
-
-
-</div>
-</nav>
-
-<div class="section pt-4 pb-0">
-    <nav class="breadcrumb">
-
+    <nav class="navbar has-shadow is-light">
+      <div class="navbar-brand">
+        <a href="index.html" class="navbar-item">
+          <img src="newvid.gif" width="112" height="32">
+        </a>
+        <a class="navbar-burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="nav-links" class="is-active">
+        <div class="navbar-start">
+          <a href="about.html" class="navbar-item">About Me</a>
+          <a href="blog.html" class="navbar-item">My Thoughts</a>
+          <a href="experience.html" class="navbar-item">Interests & Experience</a>
+          <a href="/PhotoGallery/public/index.html" class="navbar-item">Photography</a>
+          <a href="contact.html" class="navbar-item">Contact Me</a>
+        </div>
+      </div>
+    </nav>
+    <div class="section pt-4 pb-0">
+      <nav class="breadcrumb" id="breadcrumb">
         <ul class="container is-size-6.5">
-          <li class = "">
-              <a href="index.html">Home</a>
-            </li>
-      <li class = "is-active">
-        <a>My Thoughts</a>
-      </li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#" onclick="displayNotes('')">My Thoughts</a></li>
+          <li class="is-active"><a>My Thoughts</a></li>
         </ul>
       </nav>
-</div>
-
-
-<a href="blogpost2.html">
-  <section class="section"  >
-      <div class="tile is-vertical is-12 " >
-        <div class="tile" >
-          <div class="tile is-parent is-vertical box" >
-            <article class="tile is-child notification is-light" >
-              <p class="title" >Tackling Transhumanism</p>
-              <p class="subtitle">Work In Progress - Come Back Soon </p>
-            </article>
-            </div>
-          </div>
-        </a>
-
-
-
-
-
-
-        <a href="blogpost1.html">
-          <div  class="tile is-parent is-vertical box">
-            <article class="tile is-child notification is-light" >
-              <p class="title" >Carbon Credits & The Blockchain</p>
-              <p class="subtitle"> The current carbon credit marketplace is chaotic. Is going on-chain the answer? (Work In Progress)</p>
-            </article>
-          </div>
-        </div>
-      </a>
-  </section>
-
-
-  </body>
-
-
-  <footer class="footer">
-    <div class="content has-text-centered">
-    
-    
-    <p>Vidur Saigal   &nbsp&nbsp&nbsp&nbsp&nbsp   |   &nbsp&nbsp&nbsp&nbsp&nbsp   vsaigal3@seas.upenn.edu   &nbsp&nbsp&nbsp&nbsp&nbsp   |    &nbsp&nbsp&nbsp&nbsp&nbsp  770-670-0305</p>
-    
-    
     </div>
+    <div class="container welcome-message">
+      <div class="box">
+        <h1 class="title">Welcome to My Thoughts</h1>
+        <p>This section of the website pulls my Obsidian notes from my GitHub repository, which is updated every day. You can navigate through the folders and view the notes directly on this page.</p>
+      </div>
+    </div>
+    <div class="container" id="notes-container">
+      <!-- Notes will be rendered here -->
+    </div>
+    <div style="height: 50px;"></div> <!-- Blank space added here -->
+    <div class="container" id="flowchart-container">
+      <!-- Flowchart will be rendered here -->
+    </div>
+    <div style="height: 50px;"></div> <!-- Blank space added here -->
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>Vidur Saigal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vsaigal3@seas.upenn.edu &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 770-670-0305</p>
+      </div>
     </footer>
 
-  <script src="app.js"> </script>
+    <script>
+      async function fetchDirectory(path = '') {
+        const repo = 'vidursaigal/Obsidian-Notes';
+        const url = `https://api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`GitHub API returned status ${response.status}`);
+        }
+        const items = await response.json();
+        return items;
+      }
+
+      async function fetchNotes(path = '') {
+        const items = await fetchDirectory(path);
+        const notes = [];
+
+        for (const item of items) {
+          if (item.type === 'file' && item.name.endsWith('.md')) {
+            const noteResponse = await fetch(item.download_url);
+            if (!noteResponse.ok) {
+              throw new Error(`Failed to fetch note: ${item.name}`);
+            }
+            const noteContent = await noteResponse.text();
+            notes.push({ name: item.name, content: noteContent, path: item.path });
+          } else if (item.type === 'dir') {
+            notes.push({ name: item.name, type: 'dir', path: item.path });
+          }
+        }
+
+        return notes;
+      }
+
+      async function fetchAllNotes(path = '') {
+        const items = await fetchDirectory(path);
+        const notes = [];
+
+        for (const item of items) {
+          if (item.type === 'file' && item.name.endsWith('.md')) {
+            const noteResponse = await fetch(item.download_url);
+            if (!noteResponse.ok) {
+              throw new Error(`Failed to fetch note: ${item.name}`);
+            }
+            const noteContent = await noteResponse.text();
+            notes.push({ name: item.name, content: noteContent, path: item.path });
+          } else if (item.type === 'dir') {
+            const subNotes = await fetchAllNotes(item.path); // Recursively fetch subdirectories
+            notes.push(...subNotes);
+          }
+        }
+
+        return notes;
+      }
+
+      function convertMarkdownToHtml(markdown) {
+        // Comprehensive Markdown to HTML converter with Bulma styles
+        return markdown
+          .replace(/!\[\[(.*?)\]\]/gim, '<img src="https://raw.githubusercontent.com/vidursaigal/Obsidian-Notes/main/Images/$1" alt="$1" />')
+          .replace(/\[\[(.*?)\]\]/gim, '<a href="#" onclick="navigateToNote(\'$1\')">$1</a>')
+          .replace(/^### (.*$)/gim, '<h3 class="title is-3">$1</h3>')
+          .replace(/^## (.*$)/gim, '<h2 class="title is-2">$1</h2>')
+          .replace(/^# (.*$)/gim, '<h1 class="title is-1">$1</h1>')
+          .replace(/^\> (.*$)/gim, '<blockquote>$1</blockquote>')
+          .replace(/\*\*(.*)\*\*/gim, '<b>$1</b>')
+          .replace(/\*(.*)\*/gim, '<i>$1</i>')
+          .replace(/!\[(.*?)\]\((.*?)\)/gim, "<img alt='$1' src='$2' />")
+          .replace(/\[(.*?)\]\((.*?)\)/gim, "<a href='$2'>$1</a>")
+          .replace(/```(.*?)```/gims, '<pre><code>$1</code></pre>')
+          .replace(/`(.*?)`/gim, '<code>$1</code>')
+          .replace(/\n/gim, '<br />');
+      }
+
+      function updateBreadcrumb(path) {
+        const breadcrumb = document.getElementById('breadcrumb');
+        const parts = path.split('/');
+        let breadcrumbHtml = '<ul class="container is-size-6.5"><li><a href="index.html">Home</a></li><li><a href="#" onclick="displayNotes(\'\')">My Thoughts</a></li>';
+        let currentPath = '';
+        parts.forEach((part, index) => {
+          if (part) {
+            currentPath += part + '/';
+            if (index === parts.length - 1) {
+              breadcrumbHtml += `<li class="is-active"><a href="#" onclick="displayNotes('${currentPath.slice(0, -1)}')">${part}</a></li>`;
+            } else {
+              breadcrumbHtml += `<li><a href="#" onclick="displayNotes('${currentPath.slice(0, -1)}')">${part}</a></li>`;
+            }
+          }
+        });
+        breadcrumbHtml += '</ul>';
+        breadcrumb.innerHTML = breadcrumbHtml;
+      }
+
+      async function displayNotes(path = '') {
+        updateBreadcrumb(path);
+        const notes = await fetchNotes(path);
+        const container = document.getElementById('notes-container');
+        if (!container) {
+          console.error('No container found for notes');
+          return;
+        }
+
+        container.innerHTML = ''; // Clear previous content
+
+        notes.forEach(note => {
+          if (path === '' && (note.name === 'README.md' || note.name === '.obsidian' || note.name.toLowerCase() === 'images')) {
+            return; // Skip these items on the first screen
+          }
+
+          const noteElement = document.createElement('div');
+          if (note.type === 'dir') {
+            noteElement.classList.add('folder', 'box');
+            noteElement.innerHTML = `<h2>${note.name}</h2>`;
+            noteElement.addEventListener('click', () => displayNotes(note.path));
+          } else {
+            noteElement.classList.add('file', 'box');
+            noteElement.innerHTML = `<h2>${note.name.replace('.md', '')}</h2>`;
+            noteElement.addEventListener('click', () => displayNoteContent(note));
+          }
+          container.appendChild(noteElement);
+        });
+      }
+
+      function displayNoteContent(note) {
+        updateBreadcrumb(note.path);
+        const container = document.getElementById('notes-container');
+        container.innerHTML = ''; // Clear previous content
+
+        const noteElement = document.createElement('div');
+        noteElement.classList.add('file', 'box', 'markdown-content');
+        noteElement.innerHTML = `
+          <div>${convertMarkdownToHtml(note.content)}</div>
+        `;
+        container.appendChild(noteElement);
+      }
+
+      async function navigateToNote(noteName) {
+        const notes = await fetchAllNotes(''); // Fetch all notes recursively
+        const note = notes.find(n => n.name.replace('.md', '') === noteName);
+        if (note) {
+          displayNoteContent(note);
+        } else {
+          alert('Note not found');
+        }
+      }
+
+      async function fetchDirectoryStructure() {
+        const response = await fetch('https://api.github.com/repos/vidursaigal/Obsidian-Notes/git/trees/main?recursive=1');
+        const data = await response.json();
+        return data.tree.filter(item => item.type === 'tree' && !['.obsidian', 'Images'].includes(item.path.split('/')[0]));
+      }
+
+      function sanitizeNodeName(name) {
+        return name.replace(/[^a-zA-Z0-9]/g, '-');
+      }
+
+      function generateFlowchart(directories) {
+        let flowchart = 'graph TD\n';
+        const repoName = 'Obsidian_Notes';
+        flowchart += `  ${repoName}\n`;
+
+        directories.forEach(dir => {
+          const parts = dir.path.split('/');
+          if (parts.length === 1) {
+        const topLevelDir = sanitizeNodeName(parts[0]);
+        flowchart += `  ${repoName} --> ${topLevelDir}\n`;
+          } else {
+        const parent = sanitizeNodeName(parts[parts.length - 2]);
+        const child = sanitizeNodeName(parts[parts.length - 1]);
+        flowchart += `  ${parent} --> ${child}\n`;
+          }
+        });
+
+        return flowchart;
+      }
+
+      async function displayFlowchart() {
+        const directories = await fetchDirectoryStructure();
+        const flowchart = generateFlowchart(directories);
+        const container = document.getElementById('flowchart-container');
+        container.innerHTML = `<div class="mermaid box">${flowchart}</div>`;
+        mermaid.init();
+      }
+
+      window.addEventListener('load', () => {
+        displayNotes('');
+        displayFlowchart();
+      });
+    </script>
+  </body>
 </html>
