@@ -8,6 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vidur Saigal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+      /* Larger text inside each box */
+      .box {
+        font-size: 1.25rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      /* Hover effect: lift and subtle shadow */
+      .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      /* Ensure GIF figures sit on their own line and are centered */
+      .box .image {
+        display: block;
+        margin: 0.5rem auto 0;
+      }
+      /* Let tall GIFs expand their container */
+      .box .image.is-128x128 {
+        height: auto;
+      }
+      /* Masonry-style two columns */
+      .masonry {
+        column-count: 2;
+        column-gap: 1.5rem;
+      }
+      .masonry-item {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        break-inside: avoid;
+      }
+    </style>
   </head>
   <body>
 
@@ -68,17 +100,82 @@
 <section class="section"><div class="container">
 
   <div class="columns">
-    <div class="column"><img src="me.JPG" ></img></div>
-    <div class="column"><p> &nbsp&nbsp&nbsp GSMST alumnus and current senior at the University of Pennsylvania with varying interests across medicine, technology, and business. Driven by the desire to contrive solutions to the world’s most pervasive problems, I am constantly working on my technical toolset by learning both inside and outside the classroom. My mixed cultural background, being both Indian and British, has given me a unique perspective and ability to adapt to diverse environments. In addition, I have a strong commitment to volunteer work and community service, which has provided me with valuable experience and perspective. <br>
-      &nbsp&nbsp&nbsp My personal interests and side projects further showcase my technical proficiency, creativity, and entrepreneurial spirit. In my free time, I enjoy exploring emerging technologies, developing my own projects, and learning new programming languages. These pursuits have helped me develop my problem-solving skills and ability to work effectively in teams. <br>
-      &nbsp&nbsp&nbsp I am committed to maintaining the highest ethical standards and incorporating strong communication skills in my work. My preferred work style emphasizes teamwork and a collaborative approach, as well as a strong focus on continuous learning and professional development. <br>
-      &nbsp&nbsp&nbsp My professional vision is to use my expertise to drive innovation and improve the quality of life for individuals globally. My core strengths include a creative mind, attention to detail, and adaptability. My personal brand is centered around a passion for technology and a commitment to excellence; I enjoy <em>building</em> solutions. I am dedicated to staying up-to-date with industry trends and developments so as to be in tune with progress. <br>
-      &nbsp&nbsp&nbsp In addition to my technical proficiency, I also have strong communication skills, time management skills, and the ability to adapt to changing circumstances. I am a skilled leader, with experience managing teams and mentoring others, and have a proven track record of success in organizing and running projects. I have a global perspective, having worked with multicultural teams and lived abroad, and I am culturally competent and sensitive to diverse perspectives. <br>
-      &nbsp&nbsp&nbsp My digital literacy, research and analysis skills, and data-driven approach set me apart, and I am proud of my decision-making skills and ability to take effective action. I have strong interpersonal skills and am able to build relationships and resolve conflicts effectively. My strategic thinking, critical thinking skills, and mentorship experience round out my qualifications and make me well-suited for a wide range of professional challenges. <br>
-      &nbsp&nbsp&nbsp With my diverse cultural experiences and interests, I bring a unique blend of creativity, critical thinking, and problem-solving skills to any project I am a part of.
-    </p>
+    <div class="column">
+      <img src="me.JPG" alt="Vidur Saigal">
+    </div>
+    <div class="column">
+      <div class="masonry">
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      Writing mostly garbage code @ <a href="https://github.com/vidursaigal" target="_blank">GitHub</a>
+    </div>
   </div>
-</div></section>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      Tweeting occasional bangers @ <a href="https://x.com/vidur_saigal" target="_blank">X</a>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      Running to keep sane (2× half marathons & counting), peep the <a href="Running.html"" target="_blank">stats</a>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      See what I'm reading @ <a href="https://www.goodreads.com/user/show/189801690-vidur-saigal" target="_blank">Goodreads</a>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      Huge Duke basketball fan, GTHC! <a href="https://goduke.com" target="_blank">Go Duke!</a>
+      <figure class="image is-128x128">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcnlkMnZwcHNsbXB6YjR0YXY0ZnZ6dzBuZ3N4dzVzMDR0YzR2Z3J6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5qsagML42iLOK594lr/giphy.gif" alt="Duke GIF">
+      </figure>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      <a href="https://georgiadogs.com" target="_blank">Go Dawgs!</a>
+      <figure class="image is-128x128">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDFtemhnbW1oYzV6bXo0Y2U1MzlpNWFyYjZ0Z3l3N3p3MjB6MWEzMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vwFJBPXWL46sh4wTuM/giphy.gif" alt="Bulldogs GIF">
+      </figure>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      <a href="https://www.mlb.com/braves" target="_blank">Go Braves</a>
+      <figure class="image is-128x128">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2p3MWRteHRwYXV6NzE5eWkzaXg3cHJiYzBseHp1ZGlqNHhjZzZiciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cS7gN2XCYbVHNrF6gF/giphy.gif" alt="Braves GIF">
+      </figure>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      <a href="https://www.atlantafalcons.com" target="_blank">Dirty Birds</a>
+      <figure class="image is-128x128">
+        <img src="https://tenor.com/view/atlanta-falcons-bird-army-gif-10319387.gif" alt="Falcons GIF">
+      </figure>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      <a href="https://www.philadelphiaeagles.com" target="_blank">Fly Eagles Fly</a>
+      <figure class="image is-128x128">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTB0NGdlaGg2N2duYTRtMzByNnhoZWVjenRnZDA2aWd5cmJkYXpkayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dcVCOunrRkhLImKEwc/giphy.gif" alt="Eagles GIF">
+      </figure>
+    </div>
+  </div>
+  <div class="masonry-item">
+    <div class="box has-text-centered">
+      <a href="https://www.nba.com/hawks/" target="_blank">Go Hawks!</a>
+      <figure class="image is-128x128">
+        <img src="https://media.giphy.com/media/3o7bu7K9oHiGhHpp5u/giphy.gif" alt="Hawks GIF">
+      </figure>
+    </div>
+  </div>
+</div>
+    </div>
+  </div></section>
 
  
   </body>
