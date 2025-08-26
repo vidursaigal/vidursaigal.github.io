@@ -9,6 +9,37 @@
   }
 }
 
+/* Experience items hover effect */
+.experience-item {
+	/* hover pop effect on entire section */
+		margin-bottom: 2rem;
+}
+.experience-item img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+.experience-item .column {
+	padding: 1rem;
+}
+/* removed hover on outer section */
+/* inner container holds side borders and padding */
+.experience-item > .container {
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	border-radius: 8px;
+	overflow: hidden;
+		padding: 2rem;
+		/* pop animation settings */
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		transform-origin: center center;
+}
+
+/* hover effect on inner box */
+.experience-item > .container:hover {
+	transform: scale(1.02);
+	box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
 @media (min-width: 576px) {
   .HideOnMobile {
     display: initial;
@@ -140,7 +171,6 @@ box-shadow:  6px 6px 12px #c4c5c7,
 			height: 100%;
 			background-color: rgba(0, 0, 0, 0.425);
 			color: rgb(255, 255, 255);
-			vertical-align: middle;
 			text-shadow: 1px 1px 2px rgb(0, 0, 0);
 			letter-spacing: 2px;
 			font-weight:thin;
