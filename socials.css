@@ -11,19 +11,41 @@
 .wrapper .social-buttons__button {
   margin: 0px 0px 0;
 }
-.wrapper .social-button {
+.wrapper .social-button, .social-button {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
-  width: 125px;
-  height: 125px;
+  width: 140px;
+  height: 140px;
   text-decoration: none;
   border-radius: 100%;
   background: hsl(0deg, 0%, 96%);
   text-align: center;
 }
+.social-button {
+  background: transparent; /* remove gray circle */
+  border: none;
+  color: var(--brand, #3b82f6);
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+.social-button i { font-size: 56px; line-height: 1; }
+.social-button:hover {
+  transform: translateY(-1px) scale(1.015);
+  background-color: rgba(var(--brand-rgb, 59,130,246), 0.05);
+  box-shadow: 0 6px 14px rgba(var(--brand-rgb, 59,130,246), 0.16), 0 0 0 3px rgba(var(--brand-rgb, 59,130,246), 0.10);
+}
+
+/* Brand color tokens */
+.social-button--facebook { --brand: #1877F2; --brand-rgb: 24,119,242; color: var(--brand); }
+.social-button--linkedin { --brand: #0A66C2; --brand-rgb: 10,102,194; color: var(--brand); }
+.social-button--github   { --brand: #24292e; --brand-rgb: 36,41,46; color: var(--brand); }
+.social-button--snapchat { --brand: #FFFC00; --brand-rgb: 255,252,0; color: #FBBF24; }
+.social-button--instagram{ --brand: #E1306C; --brand-rgb: 225,48,108; color: var(--brand); }
+.social-button--twitter  { --brand: #1DA1F2; --brand-rgb: 29,161,242; color: var(--brand); }
+.social-button--steam    { --brand: #66C0F4; --brand-rgb: 102,192,244; color: var(--brand); }
+.social-button--mail     { --brand: #0ea5e9; --brand-rgb: 14,165,233; color: var(--brand); }
 .wrapper .social-button::after {
   content: "";
   position: absolute;
@@ -49,10 +71,10 @@
   z-index: 1;
   transition: 0.3s;
 }
-.wrapper .social-button i {
-  font-size: 50px;
+.wrapper .social-button i, .social-button i {
+  font-size: 56px;
 }
-.wrapper .social-button svg {
+.wrapper .social-button svg, .social-button svg {
   height: 40%;
   width: 40%;
 }
