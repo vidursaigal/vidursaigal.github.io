@@ -228,25 +228,15 @@ box-shadow:  6px 6px 12px #c4c5c7,
 }
 
 #slide__img1{
-	background-image: url("home.png");
+	background-image: url("resume.png");
 	background-repeat: no-repeat;
 }
 #slide__img2{
-	background-image: url("blog.png");
-	background-repeat: no-repeat;
-
-}
-#slide__img3{
-	background-image: url("resume.png");
-	background-repeat: no-repeat;
-
-}
-#slide__img4{
 	background-image: url("7dng.png");
 	background-repeat: no-repeat;
 
 }
-#slide__img5{
+#slide__img3{
 	background-image: url("contact.jpg");
 	background-repeat: no-repeat;
 

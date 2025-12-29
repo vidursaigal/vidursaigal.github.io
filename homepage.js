@@ -5,7 +5,7 @@ const items = document.querySelectorAll('.item'),
   descriptionItems = document.querySelectorAll('.item-description'),
   activeDelay = .76,
   interval = 5000;
-  const websites = ["about.html", "blog.html", "experience.html", "PhotoGallery/public/index.html", "contact.html"];
+  const websites = ["experience.html", "PhotoGallery/public/index.html", "contact.html"];
 
 
 let current = 0;
