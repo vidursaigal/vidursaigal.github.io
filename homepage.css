@@ -85,13 +85,20 @@
     position: absolute;
     top: 150px;
     left: -1.8%;
+    width: 47%;
     z-index: 100;
   }
   
   .item-header .vertical-part {
     margin: 0 -4px;
-    font-size: 7vw;
+    font-size: clamp(3rem, 5.5vw, 6rem);
     color: #fff;
+  }
+
+  .item-header .heading-break {
+    display: block;
+    height: 0;
+    margin: 0;
   }
   
   .vertical-part {
